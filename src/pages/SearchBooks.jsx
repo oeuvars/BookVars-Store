@@ -48,7 +48,7 @@ function SearchBooks() {
   };
 
   return (
-    <div class='flex flex-col primary-background min-h-screen pt-10'>
+    <div class='flex flex-col primary-background min-h-screen pt-10 pb-7'>
 
         <div class='gradient-text font-playfair phone:text-4xl phone:w-11/12 lg:w-full lg:text-7xl italic flex mx-auto justify-center text-center  mb-9'>
             Find Your Favorite Books Here
@@ -61,7 +61,7 @@ function SearchBooks() {
         </div>
 
 
-      <div class='grid phone:grid-cols-2 gap-3 lg:grid-cols-5 w-11/12 mx-auto justify-center mt-5'>
+      <div class='grid phone:grid-cols-2 gap-5 lg:grid-cols-5 w-11/12 mx-auto justify-center mt-5'>
         {results().length > 0 ? (
           results().map(book => (
             <Card>

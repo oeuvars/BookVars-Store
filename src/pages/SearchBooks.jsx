@@ -57,7 +57,7 @@ function SearchBooks() {
 
         <div>
             <input type="text" class='font-outfit pargraph-text phone:px-6 lg:px-20 phone:py-3 lg:py-4 text-lg flex justify-center text-center mx-auto rounded-md bg-blue-100 text-cyan-800 bg-opacity-70 outline-none text-opacity-70' value={query()} onInput={e => setQuery(e.target.value)} placeholder="Enter a book title..." />
-            <button onClick={handleSearch} class="flex px-5 py-2 font-outfit font-medium bg-sky-50 text-blue-500 bg-opacity-50 rounded-md shadow-md mt-5 mx-auto hover:saturate-150 transition duration-500">Search</button>
+            <button onClick={handleSearch} class="flex px-5 py-2 font-outfit font-medium bg-sky-50 text-cyan-600 bg-opacity-60 rounded-md shadow-md mt-5 mx-auto hover:saturate-150 transition duration-500">Search</button>
         </div>
 
 

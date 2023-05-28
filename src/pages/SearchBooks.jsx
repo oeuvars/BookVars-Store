@@ -81,7 +81,7 @@ function SearchBooks() {
                 </Card>
             ))
             ) : (
-                <div class='font-marcellus italic font-medium text-base text-cyan-800 w-5/6 flex justify-center text-center items-center opacity-80 phone:ml-28'>Sorry, Not here.</div>
+                <div class='font-marcellus italic font-medium text-base text-cyan-800 w-5/6 flex justify-center text-center items-center opacity-80 phone:ml-24 phone:pr-2'>Sorry, Not here.</div>
             )}
 
         </div>

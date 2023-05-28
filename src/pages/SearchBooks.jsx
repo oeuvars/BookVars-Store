@@ -61,7 +61,7 @@ function SearchBooks() {
         </div>
 
 
-      <div class='grid phone:grid-cols-2 gap-5 lg:grid-cols-5 w-11/12 mx-auto justify-center mt-5'>
+      <div class='grid phone:grid-cols-2 gap-5 lg:grid-cols-5 w-11/12 mx-auto justify-center mt-5 mb-7'>
         {results().length > 0 ? (
           results().map(book => (
             <Card>
@@ -86,7 +86,7 @@ function SearchBooks() {
 
       </div>
 
-      <div class='bg-opacity-25 mx-auto mt-auto py-3 pt-7 bg-sky-50 rounded-md w-full shadow-md'>
+      <div class='bg-opacity-25 mx-auto mt-auto py-3 bg-sky-50 rounded-md w-full shadow-md'>
         <div class='flex flex-col justify-center'>
             <p class='font-outfit font-base text-cyan-700 mx-auto'>©Anurag Das</p>
             <div className="flex mt-4 justify-center md:justify-start mx-auto" initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.5 }} transition={{ delay: 0.4, duration: 0.5 }} variants = {{ hidden: { opacity: 0, x: -50 }, visible: { opacity: 1, x: 0 }}}>

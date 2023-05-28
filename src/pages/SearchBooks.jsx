@@ -61,30 +61,30 @@ function SearchBooks() {
         </div>
 
 
-      <div class='grid phone:grid-cols-2 gap-5 lg:grid-cols-5 w-11/12 mx-auto justify-center mt-5 mb-7'>
-        {results().length > 0 ? (
-          results().map(book => (
-            <Card>
-            <div class='flex flex-col mx-auto justify-evenly'>
-              <h3 class='font-playfair phone:text-2xl lg:text-3xl text-blue-500 pb-3' style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">{book.title}</h3>
-              <img src={book.formats['image/jpeg']} alt="Book Cover" class='w-48 h-56 shadow-md transition duration-500 rounded-md flex mx-auto justify-center'/>
-              <p class='font-marcellus italic font-medium text-center phone:text-base lg:text-lg text-cyan-700 w-5/6 flex mx-auto justify-center opacity-90 pt-3 pb-2 overflow-x-scroll'>{book.authors ? reverseAuthorName(book.authors[0]?.name) : 'Unknown'}</p>
-              {book.formats && (
-                <button
-                  class="px-5 py-2 font-outfit font-medium bg-sky-50 text-sky-600 bg-opacity-50 rounded-md shadow-md mb-auto"
-                  onClick={() => handleDownloadClick(book.formats['text/html'])}
-                >
-                  Download
-                </button>
-              )}
-            </div>
-            </Card>
-          ))
-        ) : (
-            <div class='font-marcellus italic font-medium text-base text-cyan-800 w-5/6 flex justify-center text-center mx-auto items-center opacity-80 ml-auto'></div>
-        )}
+        <div class='grid phone:grid-cols-2 gap-5 lg:grid-cols-5 w-11/12 mx-auto justify-center items-center mt-5 mb-7'>
+            {results().length > 0 ? (
+            results().map(book => (
+                <Card>
+                    <div class='flex flex-col mx-auto justify-evenly'>
+                    <h3 class='font-playfair phone:text-2xl lg:text-3xl text-blue-500 pb-3' style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">{book.title}</h3>
+                    <img src={book.formats['image/jpeg']} alt="Book Cover" class='w-48 h-56 shadow-md transition duration-500 rounded-md flex mx-auto justify-center'/>
+                    <p class='font-marcellus italic font-medium text-center phone:text-base lg:text-lg text-cyan-700 w-5/6 flex mx-auto justify-center opacity-90 pt-3 pb-2 overflow-x-scroll'>{book.authors ? reverseAuthorName(book.authors[0]?.name) : 'Unknown'}</p>
+                    {book.formats && (
+                        <button
+                        class="px-5 py-2 font-outfit font-medium bg-sky-50 text-sky-600 bg-opacity-50 rounded-md shadow-md mb-auto"
+                        onClick={() => handleDownloadClick(book.formats['text/html'])}
+                        >
+                        Download
+                        </button>
+                    )}
+                    </div>
+                </Card>
+            ))
+            ) : (
+                <div class='font-marcellus italic font-medium text-base text-cyan-800 w-5/6 flex justify-center text-center items-center opacity-80 phone:ml-28'>Sorry, Not here.</div>
+            )}
 
-      </div>
+        </div>
 
       <div class='bg-opacity-25 mx-auto mt-auto py-3 bg-sky-50 rounded-md w-full shadow-md'>
         <div class='flex flex-col justify-center'>

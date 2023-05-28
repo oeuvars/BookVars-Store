@@ -1,0 +1,86 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+@import url('https://fonts.googleapis.com/css2?family=Questrial&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Marcellus&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Prata&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fascinate+Inline&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Unbounded:wght@200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Jost:wght@100;200;300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;300;400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Aladin&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Thasadith:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,700;0,800;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oleo+Script&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ribeye&display=swap');
+
+body::-webkit-scrollbar{
+  display: none;
+  }
+html{
+  -webkit-tap-highlight-color: transparent;
+  height: 100%;
+  overscroll-behavior: none;
+  scroll-behavior: smooth;
+  }
+body{
+  min-height: 100%;
+}
+/* For Chrome */
+::-webkit-scrollbar {
+  display: none;
+}
+
+/* For Firefox */
+::-moz-scrollbar {
+  display: none;
+}
+
+.gradient-text {
+  background-image: linear-gradient( 89.9deg,  rgba(178,253,238,0.96) -8.1%, rgba(207,244,254,1) 26.3%, rgba(207,244,254,0.48) 47.5%, rgba(254,219,243,0.63) 61.5%, rgba(254,219,243,1) 78.7%, rgba(254,207,210,1) 109.2% );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.paragraph-text {
+  background-image: linear-gradient( 108.1deg,  rgba(167,220,225,1) 11.2%, rgba(217,239,242,1) 88.9% );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.hero-header {
+  background-image: linear-gradient( 109.6deg,  rgba(204,228,247,1) 11.2%, rgba(237,246,250,1) 100.2% );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.book-title {
+  background-image: radial-gradient( circle farthest-corner at 10% 20%,  rgba(77,97,252,0.63) 0%, rgba(77,97,252,1) 90% );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.button-gradient {
+  background-image: radial-gradient( circle farthest-corner at 10% 20%,  rgba(77,97,252,0.63) 0%, rgba(77,97,252,1) 90% );
+}
+.background-svg {
+  background-image: url('./assets/hero.svg');
+  /* Add any additional CSS properties for background positioning, size, etc. */
+}
+.bg-hero {
+  background-image: linear-gradient( 92.7deg,  rgba(245,212,212,1) 8.5%, rgba(252,251,224,1) 90.2% );
+}
+.primary-background {
+    background-image: linear-gradient( 92.7deg,  rgba(42,136,157,1) 1.7%, rgba(122,197,214,1) 51.1%, rgba(211,232,242,1) 95.5% );
+}
+.popup-card {
+  background-image: linear-gradient( 174.2deg,  rgba(255,244,228,1) 7.1%, rgba(240,246,238,1) 67.4% );
+}
+.weird-opinion {
+    background-image: repeating-linear-gradient(90deg, rgb(95, 152, 225) 0px, rgb(95, 152, 225) 10px,rgb(115, 164, 229) 10px, rgb(115, 164, 229) 20px,rgb(135, 175, 233) 20px, rgb(135, 175, 233) 30px,rgb(214, 222, 250) 30px, rgb(214, 222, 250) 40px,rgb(174, 199, 242) 40px, rgb(174, 199, 242) 50px,rgb(155, 187, 238) 50px, rgb(155, 187, 238) 60px,rgb(194, 210, 246) 60px, rgb(194, 210, 246) 70px);
+}
+
+.bg-navbar {
+    background-image: linear-gradient( 94.3deg,  rgb(5, 11, 40) 10.9%, rgb(1, 2, 11) 87.1% );
+}
+.bg-button {
+  background-image: linear-gradient( 104.3deg,  rgba(253,243,243,1) 10.9%, rgba(248,231,231,1) 27.8%, rgba(160,112,161,1) 101.7% );
+}

@@ -79,7 +79,7 @@ export default function Home() {
                                 src={book.book_image}
                                 alt={book.title}
                                 class="flex justify-center rounded-sm object-cover phone:w-44 phone:h-60 lg:max-w-[200px] lg:max-h-[300px] mx-auto mt-3 cursor-pointer shadow-md hover:scale-105 transition duration-500"
-                                onClick={handleImageClick}
+                                //onClick={handleImageClick}
                             />
                             {showPopup() && (
                             <div className="fixed inset-0 flex items-center justify-center z-50">
@@ -111,7 +111,7 @@ export default function Home() {
                             </div>
                             )}
 
-                            <button onClick={() => openAmazonLink(book.buy_links?.find(link => link.name === 'Amazon')?.url)} class="px-5 py-2 font-outfit font-medium bg-sky-50 text-indigo-900 bg-opacity-50 rounded-md shadow-md mt-3">
+                            <button onClick={() => openAmazonLink(book.buy_links?.find(link => link.name === 'Amazon')?.url)} class="px-5 py-2 font-outfit font-medium bg-sky-50 text-cyan-700 bg-opacity-50 rounded-md shadow-md mt-3">
                                 Buy Now
                             </button>
                         </Card>

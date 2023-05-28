@@ -63,7 +63,7 @@ export default function Home() {
                 </p>
             </div>
 
-            <div class='w-11/12 grid phone:grid-cols-2 lg:grid-cols-5 gap-5 mt-4 justify-center items-center mx-auto'>
+            <div class='w-11/12 grid phone:grid-cols-2 lg:grid-cols-5 gap-5 mt-4 justify-center items-center mx-auto mb-7'>
 
 
                 {books()?.map((book, index) => (

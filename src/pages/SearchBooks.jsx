@@ -67,7 +67,7 @@ function SearchBooks() {
             <Card>
             <div class='flex flex-col mx-auto justify-evenly'>
               <h3 class='font-playfair phone:text-2xl lg:text-3xl text-blue-500 pb-3' style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">{book.title}</h3>
-              <img src={book.formats['image/jpeg']} alt="Book Cover" class='w-48 h-64 shadow-md transition duration-500 rounded-md flex mx-auto justify-center'/>
+              <img src={book.formats['image/jpeg']} alt="Book Cover" class='w-48 h-56 shadow-md transition duration-500 rounded-md flex mx-auto justify-center'/>
               <p class='font-marcellus italic font-medium text-center phone:text-base lg:text-lg text-cyan-700 w-5/6 flex mx-auto justify-center opacity-90 pt-3 pb-2 overflow-x-scroll'>{book.authors ? reverseAuthorName(book.authors[0]?.name) : 'Unknown'}</p>
               {book.formats && (
                 <button

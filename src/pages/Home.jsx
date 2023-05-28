@@ -111,7 +111,7 @@ export default function Home() {
                             </div>
                             )}
 
-                            <button onClick={() => openAmazonLink(book.buy_links?.find(link => link.name === 'Amazon')?.url)} class="px-5 py-2 font-outfit font-medium bg-sky-50 text-cyan-700 bg-opacity-50 rounded-md shadow-md mt-3">
+                            <button onClick={() => openAmazonLink(book.buy_links?.find(link => link.name === 'Amazon')?.url)} class="px-5 py-2 font-outfit font-medium bg-sky-50 text-cyan-600 bg-opacity-50 rounded-md shadow-md mt-3">
                                 Buy Now
                             </button>
                         </Card>

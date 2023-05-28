@@ -12,19 +12,16 @@ function App() {
   const [loading, setLoading] = createSignal(true);
 
   onMount(() => {
-    // Initialization logic...
-
-    // Simulating a delay of 2 seconds
     setTimeout(() => {
       setLoading(false);
-    }, 2000);
+    }, 3000);
   });
 
   return (
     <div class=''>
       {loading() ? (
         <div class="flex items-center justify-center h-screen primary-background">
-          <img src={loadingSpinner} alt="Loading Spinner" class='lg:scale-50'/>
+          <img src={loadingSpinner} alt="Loading Spinner" class='scale-50'/>
         </div>
       ) : (
         <>

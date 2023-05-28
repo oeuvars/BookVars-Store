@@ -1,21 +1,21 @@
 import Background from "../assets/hero.svg";
-import book1 from "../assets/covers/1.jpg";
-import book2 from "../assets/covers/2.jpg";
-import book3 from "../assets/covers/3.jpg";
-import book4 from "../assets/covers/4.jpg";
-import book5 from "../assets/covers/5.jpg";
-import book6 from "../assets/covers/6.jpg";
-import book7 from "../assets/covers/7.jpg";
-import book8 from "../assets/covers/8.jpg";
-import book9 from "../assets/covers/9.jpg";
-import book10 from "../assets/covers/10.jpg";
-import book11 from "../assets/covers/11.jpg";
-import book12 from "../assets/covers/12.jpeg";
-import book13 from "../assets/covers/13.jpg";
-import book14 from "../assets/covers/14.jpg";
-import book15 from "../assets/covers/15.jpg";
-import book16 from "../assets/covers/16.jpg";
-import book17 from "../assets/covers/17.jpg";
+import book1 from "../assets/covers/1.webp";
+import book2 from "../assets/covers/2.webp";
+import book3 from "../assets/covers/3.webp";
+import book4 from "../assets/covers/4.webp";
+import book5 from "../assets/covers/5.webp";
+import book6 from "../assets/covers/6.webp";
+import book7 from "../assets/covers/7.webp";
+import book8 from "../assets/covers/8.webp";
+import book9 from "../assets/covers/9.webp";
+import book10 from "../assets/covers/10.webp";
+import book11 from "../assets/covers/11.webp";
+import book12 from "../assets/covers/12.webp";
+import book13 from "../assets/covers/13.webp";
+import book14 from "../assets/covers/14.webp";
+import book15 from "../assets/covers/15.webp";
+import book16 from "../assets/covers/16.webp";
+import book17 from "../assets/covers/17.webp";
 import softmesh from "../assets/gradients/softmesh.png"
 import { Route, Routes, A } from '@solidjs/router';
 
@@ -38,7 +38,7 @@ export default function Hero() {
                     <img src={book8} class="lg:w-48 lg:h-64 phone:w-40 phone:h-40 shadow-md hover:saturate-150 transition duration-500"/>
                 </div>
                 <div class="flex flex-col gap-3 lg:-mt-56 phone:-mt-32">
-                    <img src={book7} class="lg:w-48 lg:h-64 phone:w-40 phone:h-40 shadow-md hover:saturate-150 transition duration-500"/>
+                    <img src={book14} class="lg:w-48 lg:h-64 phone:w-40 phone:h-40 shadow-md hover:saturate-150 transition duration-500"/>
                     <img src={book10} class="lg:w-48 lg:h-64 phone:w-40 phone:h-40 shadow-md hover:saturate-150 transition duration-500"/>
                     <img src={book9} class="lg:w-48 lg:h-64 phone:w-40 phone:h-40 shadow-md hover:saturate-150 transition duration-500"/>
                     <img src={book11} class="lg:w-48 lg:h-64 phone:w-40 phone:h-40 shadow-md hover:saturate-150 transition duration-500"/>
@@ -46,7 +46,7 @@ export default function Hero() {
                 <div class="flex flex-col gap-3">
                     <img src={book12} class="lg:w-48 lg:h-64 phone:w-40 phone:h-40 shadow-md hover:saturate-150 transition duration-500"/>
                     <img src={book17} class="lg:w-48 lg:h-64 phone:w-40 phone:h-40 shadow-md hover:saturate-150 transition duration-500"/>
-                    <img src={book14} class="lg:w-48 lg:h-64 phone:w-40 phone:h-40 shadow-md hover:saturate-150 transition duration-500"/>
+                    <img src={book7} class="lg:w-48 lg:h-64 phone:w-40 phone:h-40 shadow-md hover:saturate-150 transition duration-500"/>
                 </div>
             </div>
 

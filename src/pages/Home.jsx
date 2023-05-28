@@ -70,7 +70,7 @@ export default function Home() {
                     <div key={index}>
                         <Card>
                             <h2
-                                class="font-playfair font-medium text-3xl text-blue-500"
+                                class="font-playfair font-medium phone:text-xl lg:text-3xl text-blue-500"
                                 style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"
                             >
                                 {capitalize(book.title)}

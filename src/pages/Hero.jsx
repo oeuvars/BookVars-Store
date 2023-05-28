@@ -51,7 +51,7 @@ export default function Hero() {
             </div>
 
             {/* */}
-            <div class=" flex mx-auto justify-center items-center lg:w-3/6 phone:pt-5 lg:pt-0s">
+            <div class=" flex mx-auto justify-center items-center lg:w-3/6 phone:pt-5 phone:pb-7 lg:pb-0 lg:pt-0s">
                 <div class="flex flex-col gap-5">
                     <header class="font-playfair italic font-medium lg:text-9xl phone:text-7xl hero-header saturate-200 lg:w-11/12 flex justify-center mx-aut lg:mr-5">
                         BookVars

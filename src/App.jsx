@@ -3,7 +3,6 @@ import { Route, Routes, A } from '@solidjs/router';
 import Home from './pages/Home';
 import Cart from './pages/Cart';
 import Hero from './pages/Hero';
-import SearchBooks from './pages/SearchBooks';
 import { createSignal, onMount } from 'solid-js';
 
 import loadingSpinner from './assets/giphy.gif';

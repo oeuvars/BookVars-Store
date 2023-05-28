@@ -56,7 +56,7 @@ export default function Hero() {
                     <header class="font-playfair italic font-medium lg:text-9xl phone:text-7xl hero-header saturate-200 lg:w-11/12 flex justify-center mx-aut lg:mr-5">
                         BookVars
                     </header>
-                    <p class="font-marcellus font-medium text-base paragraph-text phone:text-center lg:text-start w-5/6 flex mx-auto opacity-80">Ignite your imagination at our online bookstore—curated literary treasures, personalized recommendations, and seamless delivery. Enter a world of endless possibilities and let your reading journey begin.</p>
+                    <p class="font-marcellus font-medium text-base paragraph-text phone:text-center lg:text-start w-5/6 flex mx-auto">Ignite your imagination at our online bookstore—curated literary treasures, personalized recommendations, and seamless delivery. Enter a world of endless possibilities and let your reading journey begin.</p>
                     <button class="px-5 py-2 font-outfit font-medium bg-sky-50 text-cyan-600 border-cyan-500 border-2 bg-opacity-30 shadow-md mt-2 w-32 flex phone:justify-center lg:justify-start lg:ml-16 phone:mx-auto lg:mx-0">
                         <A class="flex justify-center mx-auto" href='/'>
                             Explore

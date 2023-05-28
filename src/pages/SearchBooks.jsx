@@ -48,7 +48,7 @@ function SearchBooks() {
   };
 
   return (
-    <div class='flex flex-col primary-background min-h-screen pt-10 pb-7'>
+    <div class='flex flex-col primary-background min-h-screen pt-10'>
 
         <div class='gradient-text font-playfair phone:text-4xl phone:w-11/12 lg:w-full lg:text-7xl italic flex mx-auto justify-center text-center  mb-9'>
             Find Your Favorite Books Here
@@ -86,7 +86,7 @@ function SearchBooks() {
 
       </div>
 
-      <div class='bg-opacity-25 mx-auto mt-auto py-3 bg-sky-50 rounded-md w-full shadow-md'>
+      <div class='bg-opacity-25 mx-auto mt-auto py-3 pt-7 bg-sky-50 rounded-md w-full shadow-md'>
         <div class='flex flex-col justify-center'>
             <p class='font-outfit font-base text-cyan-700 mx-auto'>©Anurag Das</p>
             <div className="flex mt-4 justify-center md:justify-start mx-auto" initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.5 }} transition={{ delay: 0.4, duration: 0.5 }} variants = {{ hidden: { opacity: 0, x: -50 }, visible: { opacity: 1, x: 0 }}}>

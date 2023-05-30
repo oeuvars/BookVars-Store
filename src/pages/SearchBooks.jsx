@@ -125,7 +125,7 @@ function SearchBooks() {
         )}
       </div>
 
-      <div class='bg-opacity-25 mx-auto mt-auto py-3 bg-sky-50 rounded-md w-full shadow-md'>
+      <div class='bg-opacity-25 mx-auto mt-20 py-3 bg-sky-50 rounded-md w-full shadow-md'>
         <div class='flex flex-col justify-center'>
           <p class='font-outfit font-base text-cyan-700 mx-auto'>©Anurag Das</p>
           <div

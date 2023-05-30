@@ -95,7 +95,7 @@ function SearchBooks() {
                     <img
                       src={book.formats['image/jpeg']}
                       alt="Book Cover"
-                      class='phone:w-44 phone:h-52 lg:w-56 lg:h-80 shadow-md transition duration-500 rounded-md flex mx-auto justify-center'
+                      class='phone:w-48 phone:h-52 lg:w-56 lg:h-80 shadow-md transition duration-500 rounded-md flex mx-auto justify-center'
                     />
                     <p
                       class='font-outfit scrollbar-hidden font-medium text-center phone:text-base lg:text-lg text-cyan-700 flex mx-auto justify-center opacity-90 pt-3 pb-2 whitespace-pre-wrap'

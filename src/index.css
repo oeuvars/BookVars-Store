@@ -61,6 +61,9 @@ body{
 .button-gradient {
   background-image: radial-gradient( circle farthest-corner at 10% 20%,  rgba(77,97,252,0.63) 0%, rgba(77,97,252,1) 90% );
 }
+.scrollbar-hidden::-webkit-scrollbar::-moz-scrollbar {
+  display: none;
+}
 .background-svg {
   background-image: url('./assets/hero.svg');
   /* Add any additional CSS properties for background positioning, size, etc. */

@@ -107,7 +107,7 @@ function SearchBooks() {
                     </p>
                     {book.formats && (
                       <button
-                        class="px-5 py-2 font-outfit font-medium bg-sky-50 text-sky-600 bg-opacity-50 rounded-md shadow-md mb-auto"
+                        class="px-5 py-2 font-outfit font-medium phone:text-sm lg:text-base bg-sky-50 text-sky-600 bg-opacity-50 rounded-md shadow-md mb-auto"
                         onClick={() => handleDownloadClick(book.formats['text/html'])}
                       >
                         Download

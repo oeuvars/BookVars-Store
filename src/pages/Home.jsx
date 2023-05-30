@@ -53,7 +53,7 @@ export default function Home() {
                 </p>
             </div>
 
-            <div class='w-11/12 grid phone:grid-cols-2 lg:grid-cols-5 gap-5 mt-4 justify-center items-center mx-auto mb-7'>
+            <div class='w-11/12 grid phone:grid-cols-2 lg:grid-cols-5 lg:gap-5 phone:gap-2 mt-4 justify-center items-center mx-auto mb-7'>
 
 
                 {books()?.map((book, index) => (
@@ -71,7 +71,7 @@ export default function Home() {
                                 class="flex justify-center rounded-sm object-cover phone:w-48 phone:h-52 lg:w-56 lg:h-80 mx-auto mt-3 cursor-pointer shadow-md"
                             />
 
-                            <button onClick={() => openAmazonLink(book.buy_links?.find(link => link.name === 'Amazon')?.url)} class="px-5 py-2 font-outfit font-medium bg-sky-50 text-cyan-600 bg-opacity-50 rounded-md shadow-md mt-3">
+                            <button onClick={() => openAmazonLink(book.buy_links?.find(link => link.name === 'Amazon')?.url)} class="px-5 py-2 font-outfit font-medium phone:text-sm lg:text-base bg-sky-50 text-cyan-600 bg-opacity-50 rounded-md shadow-md mt-3">
                                 Buy Now
                             </button>
                         </Card>

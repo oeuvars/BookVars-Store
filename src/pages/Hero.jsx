@@ -16,7 +16,6 @@ import book14 from "../assets/covers/14.webp";
 import book15 from "../assets/covers/15.webp";
 import book16 from "../assets/covers/16.webp";
 import book17 from "../assets/covers/17.webp";
-import softmesh from "../assets/gradients/softmesh.png"
 import { Route, Routes, A } from '@solidjs/router';
 
 export default function Hero() {

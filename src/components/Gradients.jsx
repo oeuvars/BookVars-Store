@@ -1,6 +1,6 @@
-import coffeedesign from '../Assets/logo1.svg';
-import designer from '../Assets/logo2.svg';
-import salon from '../Assets/logo3.svg';
+import coffeedesign from '../assets/Logos/logo1.svg';
+import designer from '../assets/Logos/logo2.svg';
+import salon from '../assets/Logos/logo3.svg';
 
 export default function Gradients() {
   return (

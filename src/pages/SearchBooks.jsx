@@ -72,7 +72,7 @@ function SearchBooks() {
         />
         <button
           onClick={handleSearch}
-          class="flex px-5 py-2 font-outfit font-medium bg-sky-50 text-cyan-600 bg-opacity-60 rounded-md shadow-md mt-5 mx-auto hover:saturate-150 transition duration-500"
+          class="flex px-5 py-2 font-outfit font-medium bg-sky-50 hover:bg-sky-50 hover:bg-opacity-80 text-cyan-600 bg-opacity-60 rounded-md shadow-md mt-5 mx-auto hover:saturate-150 transition duration-500"
         >
           Search
         </button>

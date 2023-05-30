@@ -1,12 +1,8 @@
-import Card from "../components/Card";
-import { createSignal, createEffect, onMount } from 'solid-js';
-import banner from "../assets/BookVars.svg";
-import Hero from "./Hero";
-import SearchBooks from "./SearchBooks";
 import { Motion } from "@motionone/solid";
-import BookSlider from "./BookSlider";
+import { onMount, createEffect, createSignal } from "solid-js";
+import Card from "../components/Card";
 
-export default function Home() {
+export default function BookSlider() {
 
     const [books, setBooks] = createSignal([]);
 
@@ -33,30 +29,12 @@ export default function Home() {
         return str.charAt(0).toUpperCase() + str.slice(1).toLowerCase();
       };
 
-
     return(
-        <div class="primary-background min-h-screen">
-
-            <Hero />
-
-            <div class="flex justify-center mx-auto bg-opacity-60 pt-7 lg:pb-10 phone:w-11/12 lg:w-full">
-                <img src={banner} class="rounded-md bg-opacity-50 bg-sky-100 shadow-sm hover:saturate-150 hover:scale-105 transition duration-500"/>
-            </div>
-
-            <div class="lg:ml-4">
-                <header class="font-playfair gradient-text phone:text-4xl lg:text-5xl font-medium pt-5 pb-3 flex mx-auto justify-start lg:mr-auto w-11/12 italic">
-                    Trending this Month
-                </header>
-                <p class="flex mx-auto font-marcellus font-medium paragraph-text w-11/12 phone:text-base lg:text-xl py-4">
-                    From gripping thrillers to heartwarming novels, this month's best sellers offer captivating stories for every reader
-                </p>
-            </div>
-
-            <div class='w-11/12 grid phone:grid-cols-2 lg:grid-cols-5 lg:gap-5 phone:gap-2 mt-4 justify-center items-center mx-auto mb-7'>
-
-
+        <div class="primary-background py-5">
+            <div class="cursor-grab overflow-hidden w-11/12 flex mx-auto py-10 px-4 bg-cyan-100 shadow-md bg-opacity-10 rounded-lg relative">
+                <div class="gap-x-1 flex">
                 {books()?.map((book, index) => (
-                    <div key={index}>
+                    <div key={index} class="">
                         <Card>
                             <h2
                                 class="font-aladin font-medium phone:text-xl lg:text-3xl text-blue-500"
@@ -67,21 +45,30 @@ export default function Home() {
                             <img
                                 src={book.book_image}
                                 alt={book.title}
-                                class="flex justify-center rounded-sm object-cover phone:w-48 phone:h-52 lg:w-56 lg:h-80 mx-auto mt-3 cursor-pointer shadow-md"
+                                class="flex justify-center rounded-sm object-cover phone:min-w-[192px] phone:min-h-[310px] lg:min-w-[224px] lg:h-[320px] mx-auto mt-3 cursor-pointer shadow-md"
                             />
 
                             <button onClick={() => openAmazonLink(book.buy_links?.find(link => link.name === 'Amazon')?.url)} class="px-5 py-2 font-outfit font-medium phone:text-sm lg:text-base bg-sky-50 text-cyan-600 bg-opacity-50 rounded-md shadow-md mt-3">
                                 Buy Now
                             </button>
                         </Card>
+                        <div class="absolute inset-0 flex items-center justify-between px-5">
+                            <button class="p-1 rounded-full bg-white bg-opacity-10 text-neutral-700 hover:bg-white transition duration-500">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 19.5L3 12m0 0l7.5-7.5M3 12h18" />
+                                </svg>
+                            </button>
+                            <button class="p-1 rounded-full bg-white bg-opacity-10 text-neutral-700 hover:bg-white transition duration-500">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
+                                </svg>
+                            </button>
+                        </div>
 
                     </div>
                 ))}
-
+                </div>
             </div>
-
-            <SearchBooks />
-            <BookSlider />
         </div>
     );
 }

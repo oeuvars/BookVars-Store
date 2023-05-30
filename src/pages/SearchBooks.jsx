@@ -62,7 +62,7 @@ function SearchBooks() {
       <div>
         <input
           type="text"
-          class='font-outfit pargraph-text phone:px-6 lg:px-20 phone:py-3 lg:py-4 phone:text-lg lg:text-xl flex justify-center text-center mx-auto rounded-md bg-blue-100 text-cyan-800 bg-opacity-70 outline-none text-opacity-70'
+          class='font-outfit pargraph-text phone:px-6 lg:px-20 phone:py-3 lg:py-4 phone:text-lg lg:text-xl flex justify-center text-center mx-auto rounded-md bg-blue-100 text-cyan-800 bg-opacity-70 outline-none text-opacity-70 shadow-md'
           value={query()}
           onInput={e => setQuery(e.target.value)}
           placeholder="Enter a book title..."
@@ -95,7 +95,7 @@ function SearchBooks() {
                     <img
                       src={book.formats['image/jpeg']}
                       alt="Book Cover"
-                      class='phone:w-44 phone:h-60 lg:w-56 lg:h-80 shadow-md transition duration-500 rounded-md flex mx-auto justify-center'
+                      class='phone:w-44 phone:h-52 lg:w-56 lg:h-80 shadow-md transition duration-500 rounded-md flex mx-auto justify-center'
                     />
                     <p
                       class='font-outfit scrollbar-hidden font-medium text-center phone:text-base lg:text-lg text-cyan-700 flex mx-auto justify-center opacity-90 pt-3 pb-2 whitespace-pre-wrap'

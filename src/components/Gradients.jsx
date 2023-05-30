@@ -5,7 +5,7 @@ import salon from '../Assets/logo3.svg';
 export default function Gradients() {
   return (
     <div>
-        <div className='flex pb-10 justify-center'>
+        <div className='lg:flex pb-10 justify-center'>
             <div className='text-center justify-center shadow-lg px-10 rounded-md my-1 mx-3 mb-2 basic-one lg:hover:saturate-150 lg:ease-in lg:transition lg:duration-500'>
                 <div className='flex justify-center'>
                     <img src={coffeedesign} alt="" width={150} height={150}/>

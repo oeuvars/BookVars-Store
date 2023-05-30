@@ -4,22 +4,12 @@ import { onCleanup } from "solid-js";
 import banner from "../assets/BookVars.svg";
 import Hero from "./Hero";
 import SearchBooks from "./SearchBooks";
+import { Motion } from "@motionone/solid";
 
 export default function Home() {
 
     const [books, setBooks] = createSignal([]);
-    const [showPopup, setShowPopup] = createSignal(false);
     const [selectedBook, setSelectedBook] = createSignal(null);
-
-    const handleImageClick = (book) => {
-        setSelectedBook(book);
-        setShowPopup(true);
-    };
-
-    const handleCloseClick = () => {
-        setSelectedBook(null);
-        setShowPopup(false);
-    };
 
     onMount(async () => {
         const response = await fetch(
@@ -70,7 +60,7 @@ export default function Home() {
                     <div key={index}>
                         <Card>
                             <h2
-                                class="font-playfair font-medium phone:text-xl lg:text-3xl text-blue-500"
+                                class="font-aladin font-medium phone:text-xl lg:text-3xl text-blue-500"
                                 style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"
                             >
                                 {capitalize(book.title)}
@@ -79,37 +69,7 @@ export default function Home() {
                                 src={book.book_image}
                                 alt={book.title}
                                 class="flex justify-center rounded-sm object-cover phone:w-48 phone:h-52 lg:w-56 lg:h-80 mx-auto mt-3 cursor-pointer shadow-md"
-                                //onClick={handleImageClick}
                             />
-                            {showPopup() && (
-                            <div className="fixed inset-0 flex items-center justify-center z-50">
-                                <div className="fixed inset-0 backdrop-blur-md" onClick={handleCloseClick}>
-
-                                </div>
-                                <div className="fixed top-0 left-0 right-0 bottom-0 flex items-center justify-center">
-                                    <div className="relative popup-card rounded-lg p-4 w-1/3 h-1/2">
-                                        <button
-                                        className="absolute top-2 right-2 text-gray-600 hover:text-gray-800"
-                                        onClick={handleCloseClick}
-                                        >
-                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#083344" class="w-7 h-7">
-                                                <path fill-rule="evenodd" d="M5.47 5.47a.75.75 0 011.06 0L12 10.94l5.47-5.47a.75.75 0 111.06 1.06L13.06 12l5.47 5.47a.75.75 0 11-1.06 1.06L12 13.06l-5.47 5.47a.75.75 0 01-1.06-1.06L10.94 12 5.47 6.53a.75.75 0 010-1.06z" clip-rule="evenodd" />
-                                            </svg>
-                                        </button>
-
-                                        <div>
-                                            {books().map((book, index) => (
-                                                <div key={index}>
-                                                <h2 class="text-xl font-bold mb-2">{book.title}</h2>
-                                                <p>{book.description}</p>
-                                                </div>
-                                            ))}
-                                        </div>
-
-                                    </div>
-                                </div>
-                            </div>
-                            )}
 
                             <button onClick={() => openAmazonLink(book.buy_links?.find(link => link.name === 'Amazon')?.url)} class="px-5 py-2 font-outfit font-medium bg-sky-50 text-cyan-600 bg-opacity-50 rounded-md shadow-md mt-3">
                                 Buy Now

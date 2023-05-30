@@ -17,6 +17,7 @@
     "vite-plugin-solid": "^2.5.0"
   },
   "dependencies": {
+    "@motionone/solid": "^10.16.2",
     "@solidjs/router": "^0.8.2",
     "axios": "^1.4.0",
     "react-spring": "^9.7.1",

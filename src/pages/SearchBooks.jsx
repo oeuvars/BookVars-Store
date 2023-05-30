@@ -2,6 +2,7 @@ import { createSignal } from 'solid-js';
 import Card from '../components/Card';
 import SocialMediaIcons from "../components/SocialMediaIcons";
 import loadingSpinner from '../assets/clock.gif';
+import Gradients from '../components/Gradients';
 
 function SearchBooks() {
   const [query, setQuery] = createSignal('');
@@ -55,9 +56,11 @@ function SearchBooks() {
   return (
     <div class='flex flex-col primary-background min-h-screen pt-10 w-full'>
 
-      <div class='gradient-text font-playfair phone:text-4xl phone:w-11/12 lg:w-full lg:text-7xl italic flex mx-auto justify-center text-center mb-9'>
-        Find Your Favorite Books Here
-      </div>
+        <div class='gradient-text font-playfair phone:text-4xl phone:w-11/12 lg:w-full lg:text-7xl italic flex mx-auto justify-center text-center mb-9'>
+            Find Your Favorite Books Here
+        </div>
+
+        <Gradients />
 
       <div>
         <input
@@ -87,7 +90,7 @@ function SearchBooks() {
                 <Card>
                   <div class='flex flex-col mx-auto justify-evenly'>
                     <h3
-                      class='font-playfair phone:text-xl lg:text-3xl text-blue-500 pb-3'
+                      class='font-aladin phone:text-xl lg:text-3xl text-blue-500 pb-3'
                       style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"
                     >
                       {book.title}

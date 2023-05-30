@@ -98,7 +98,7 @@ function SearchBooks() {
                     <img
                       src={book.formats['image/jpeg']}
                       alt="Book Cover"
-                      className={`font-playfair italic text-neutral-800 text-opacity-50 lg:text-xl phone:text-lg basic-two flex items-center justify-center`}
+                      className={`font-playfair italic text-neutral-800 text-opacity-60 lg:text-xl phone:text-lg basic-two flex items-center justify-center`}
                       class='phone:w-48 phone:h-52 lg:w-56 lg:h-80 shadow-md transition duration-500 rounded-md flex mx-auto justify-center hover:scale-105'
                     />
                     <p

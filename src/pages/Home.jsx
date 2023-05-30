@@ -78,7 +78,7 @@ export default function Home() {
                             <img
                                 src={book.book_image}
                                 alt={book.title}
-                                class="flex justify-center rounded-sm object-cover phone:w-44 phone:h-60 lg:w-56 lg:h-80 mx-auto mt-3 cursor-pointer shadow-md"
+                                class="flex justify-center rounded-sm object-cover phone:w-48 phone:h-52 lg:w-56 lg:h-80 mx-auto mt-3 cursor-pointer shadow-md"
                                 //onClick={handleImageClick}
                             />
                             {showPopup() && (

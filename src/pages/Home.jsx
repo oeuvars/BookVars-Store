@@ -1,6 +1,5 @@
 import Card from "../components/Card";
 import { createSignal, createEffect, onMount } from 'solid-js';
-import { onCleanup } from "solid-js";
 import banner from "../assets/BookVars.svg";
 import Hero from "./Hero";
 import SearchBooks from "./SearchBooks";
@@ -10,6 +9,7 @@ export default function Home() {
 
     const [books, setBooks] = createSignal([]);
     const [selectedBook, setSelectedBook] = createSignal(null);
+
 
     onMount(async () => {
         const response = await fetch(

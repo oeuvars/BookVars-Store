@@ -116,7 +116,7 @@ body{
   background-blend-mode: lighten, overlay, lighten, screen, normal;
 }
 .basic-two {
-  background-image: radial-gradient( circle farthest-corner at 10% 20%,  rgba(251,222,238,1) 15.6%, rgba(206,201,226,1) 80.3% );
+  background-image: radial-gradient( circle farthest-corner at 10% 20%,  rgba(226,240,254,1) 0%, rgba(255,247,228,1) 90% );
 }
 .soft-weather {
   background: radial-gradient(80.99% 100% at 50% 0%, #00FF0A 0%, #36008E 100%), radial-gradient(50% 123.47% at 50% 50%, #EFE7C8 0%, #36008E 100%), linear-gradient(301.28deg, #FF006B 0%, #48DD9E 100%), linear-gradient(294.84deg, #5A60E4 0%, #D30000 100%), linear-gradient(52.29deg, #000000 0%, #00FF85 100%), radial-gradient(100% 138.69% at 100% 0%, #0007A5 0%, #FF7A00 100%), radial-gradient(70.41% 100% at 50% 0%, #D5B300 0%, #2200AA 100%);

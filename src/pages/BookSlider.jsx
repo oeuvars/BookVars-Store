@@ -53,7 +53,7 @@ export default function BookSlider() {
 
       <div
         id="bookSliderContainer"
-        class="overflow-x-auto flex mx-auto lg:py-7 phone:py-5 px-4 bg-cyan-100 shadow-md bg-opacity-10 rounded-lg relative w-11/12 mb-7"
+        class="overflow-x-auto flex lg:py-7 phone:py-5 px-4 bg-cyan-100 shadow-md bg-opacity-10 rounded-lg relative lg:w-11/12 mb-7 phone:mx-1 lg:mx-auto"
       >
         <div class="flex gap-x-3">
           {books().map((book, index) => (

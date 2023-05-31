@@ -19,6 +19,9 @@
 body::-webkit-scrollbar{
   display: none;
   }
+body::-moz-scrollbar {
+  display: none;
+}
 html{
   -webkit-tap-highlight-color: transparent;
   height: 100%;
@@ -27,15 +30,7 @@ html{
   }
 body{
   min-height: 100%;
-}
-/* For Chrome */
-::-webkit-scrollbar {
-  display: none;
-}
-
-/* For Firefox */
-::-moz-scrollbar {
-  display: none;
+  scrollbar-width: none;
 }
 
 .gradient-text {

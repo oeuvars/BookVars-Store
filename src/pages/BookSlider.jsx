@@ -61,14 +61,13 @@ export default function BookSlider() {
               <Card>
                 <h2
                   class="font-aladin font-medium phone:text-xl lg:text-3xl text-blue-500"
-                  style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"
                 >
                   {capitalize(book.title)}
                 </h2>
                 <img
                   src={book.book_image}
                   alt={book.title}
-                  class="flex justify-center rounded-sm object-cover phone:min-w-[192px] phone:min-h-[310px] lg:min-w-[224px] lg:h-[320px] mx-auto mt-3 cursor-pointer shadow-md"
+                  class="flex justify-center rounded-md object-cover phone:min-w-[192px] phone:min-h-[310px] lg:min-w-[224px] lg:h-[320px] mx-auto mt-3 cursor-pointer shadow-md"
                 />
                 <button
                   onClick={() =>

@@ -61,6 +61,7 @@ export default function BookSlider() {
               <Card>
                 <h2
                   class="font-aladin font-medium phone:text-xl lg:text-3xl text-blue-500"
+                  style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"
                 >
                   {capitalize(book.title)}
                 </h2>

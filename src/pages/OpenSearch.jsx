@@ -4,49 +4,27 @@ import SocialMediaIcons from "../components/SocialMediaIcons";
 import loadingSpinner from '../assets/clock.gif';
 import Gradients from '../components/Gradients';
 
-function SearchBooks() {
+function OpenLibrarySearch() {
   const [query, setQuery] = createSignal('');
   const [results, setResults] = createSignal([]);
   const [loading, setLoading] = createSignal(false);
 
-  const getUniqueBooks = (books) => {
-    const uniqueBooks = [];
-    const seenBookIds = new Set();
-
-    for (const book of books) {
-      if (!seenBookIds.has(book.id)) {
-        uniqueBooks.push(book);
-        seenBookIds.add(book.id);
-      }
-    }
-
-    return uniqueBooks;
-  };
-
   const handleSearch = () => {
     setLoading(true);
 
-    fetch(`https://gutendex.com/books/?search=${encodeURIComponent(query())}`)
+    fetch(`https://openlibrary.org/search.json?q=${encodeURIComponent(query())}`)
       .then(response => response.json())
       .then(data => {
-        const uniqueResults = getUniqueBooks(data.results);
-        setResults(uniqueResults);
+        const booksData = data?.docs || [];
+        setResults(booksData);
       })
       .catch(error => {
         console.error('Error fetching search results:', error);
         setResults([]);
       })
       .finally(() => {
-        setLoading(false); // Set loading state to false after search is complete (success or error)
+        setLoading(false);
       });
-  };
-
-  const reverseAuthorName = (name) => {
-    const names = name.split(',').map(n => n.trim());
-    if (names.length === 2) {
-      return `${names[1]} ${names[0]}`;
-    }
-    return name;
   };
 
   const handleDownloadClick = (url) => {
@@ -55,12 +33,11 @@ function SearchBooks() {
 
   return (
     <div class='flex flex-col primary-background min-h-screen pt-10 w-full'>
+      <div class='gradient-text font-playfair phone:text-4xl phone:w-11/12 lg:w-full lg:text-7xl italic flex mx-auto justify-center text-center mb-9'>
+        Find Your Favorite Books Here
+      </div>
 
-        <div class='gradient-text font-playfair phone:text-4xl phone:w-11/12 lg:w-full lg:text-7xl italic flex mx-auto justify-center text-center mb-9'>
-            Find Your Favorite Books Here
-        </div>
-
-        <Gradients />
+      <Gradients />
 
       <div>
         <input
@@ -78,7 +55,7 @@ function SearchBooks() {
         </button>
       </div>
 
-      <div class='grid phone:grid-cols-2 gap-5 lg:grid-cols-5 w-11/12 mx-auto justify-center items-center mt-5 mb-7 relative'>
+      <div class='grid phone:grid-cols-2 phone:gap-2 lg:gap-5 lg:grid-cols-5 w-11/12 mx-auto justify-center items-center mt-5 mb-7 relative'>
         {loading() ? (
           <div class="flex absolute inset-0 justify-center items-center mx-auto pt-16 opacity-80">
             <img src={loadingSpinner} alt="Loading Spinner" class='w-20 h-20'/>
@@ -96,30 +73,28 @@ function SearchBooks() {
                       {book.title}
                     </h3>
                     <img
-                      src={book.formats['image/jpeg']}
+                      src={`https://covers.openlibrary.org/b/id/${book.cover_i}-M.jpg`}
                       alt="Book Cover"
                       className={`font-playfair italic text-neutral-800 text-opacity-60 lg:text-xl phone:text-lg basic-two flex items-center justify-center`}
                       class='phone:w-48 phone:h-52 lg:w-56 lg:h-80 shadow-md transition duration-500 rounded-md flex mx-auto justify-center hover:scale-105'
                     />
                     <p
-                      class='font-outfit scrollbar-hidden font-medium text-center phone:text-base lg:text-lg text-cyan-700 flex mx-auto justify-center opacity-90 pt-3 pb-2 whitespace-pre-wrap'
+                      class='font-marcellus scrollbar-hidden text-center phone:text-base lg:text-lg text-cyan-700 saturate-150 flex mx-auto justify-center pt-3 pb-2 whitespace-pre-wrap'
                     >
-                      {book.authors ? reverseAuthorName(book.authors[0]?.name) : 'Unknown'}
+                      {book.author_name ? book.author_name[0] : 'Unknown'}
                     </p>
-                    {book.formats && (
-                      <button
-                        class="px-5 py-2 font-outfit font-medium phone:text-sm lg:text-base bg-sky-50 text-sky-600 bg-opacity-50 rounded-md shadow-md mb-auto"
-                        onClick={() => handleDownloadClick(book.formats['text/html'])}
-                      >
-                        Download
-                      </button>
-                    )}
+                    <button
+                      class="lg:px-5 phone:px-3 py-2 font-outfit font-medium phone:text-sm lg:text-base bg-sky-50 text-sky-600 bg-opacity-50 hover:bg-opacity-90 transition duration-500 rounded-md shadow-md mb-auto"
+                      onClick={() => handleDownloadClick(`https://openlibrary.org${book.key}/epub`)}
+                    >
+                      Read Online
+                    </button>
                   </div>
                 </Card>
               ))
             ) : (
               <div class='centered-container absolute inset-0 font-marcellus italic font-medium text-lg text-cyan-800 flex justify-center items-center opacity-95 mt-3'>
-                Sorry, Not here.
+                Sorry, no results found.
               </div>
             )}
           </>
@@ -145,4 +120,4 @@ function SearchBooks() {
   );
 }
 
-export default SearchBooks;
+export default OpenLibrarySearch;

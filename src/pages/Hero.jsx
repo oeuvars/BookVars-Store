@@ -36,7 +36,7 @@ export default function Hero() {
                     <img src={book8} class="lg:w-48 lg:h-64 phone:w-40 phone:h-40 shadow-md hover:saturate-150 transition duration-500"/>
                     <img src={book1} class="lg:w-48 lg:h-64 phone:w-40 phone:h-40 shadow-md hover:saturate-150 transition duration-500"/>
                 </div>
-                <div class="flex flex-col gap-3 lg:-mt-56 phone:-mt-32">
+                <div class="flex flex-col gap-3 lg:-mt-56 phone:-mt-36">
                     <img src={book14} class="lg:w-48 lg:h-64 phone:w-40 phone:h-40 shadow-md hover:saturate-150 transition duration-500"/>
                     <img src={book10} class="lg:w-48 lg:h-64 phone:w-40 phone:h-40 shadow-md hover:saturate-150 transition duration-500"/>
                     <img src={book9} class="lg:w-48 lg:h-64 phone:w-40 phone:h-40 shadow-md hover:saturate-150 transition duration-500"/>

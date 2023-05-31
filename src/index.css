@@ -127,3 +127,13 @@ body{
   cursor: grab;
   overflow: hidden;
 }
+#bookSliderContainer::-webkit-scrollbar {
+  display: none
+}
+#bookSliderContainer::-moz-scrollbar {
+  display: none;
+}
+#bookSliderContainer {
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE 10+ */
+}

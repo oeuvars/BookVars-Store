@@ -67,8 +67,9 @@ export default function BookSlider() {
                 </h2>
                 <img
                   src={book.book_image}
-                  alt={book.title}
-                  class="flex justify-center rounded-md object-cover phone:min-w-[192px] phone:min-h-[310px] lg:min-w-[224px] lg:h-[320px] mx-auto mt-3 cursor-pointer shadow-md"
+                  alt="Book Cover"
+                  className={`font-playfair italic text-neutral-800 text-opacity-70 lg:text-xl phone:text-lg basic-two flex items-center justify-center`}
+                  class='phone:w-48 phone:h-52 lg:w-56 lg:h-80 shadow-md transition duration-500 rounded-md flex mx-auto justify-center'
                 />
                 <button
                   onClick={() =>

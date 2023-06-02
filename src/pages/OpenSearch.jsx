@@ -75,11 +75,11 @@ function OpenLibrarySearch() {
                     <img
                       src={`https://covers.openlibrary.org/b/id/${book.cover_i}-M.jpg`}
                       alt="Book Cover"
-                      className={`font-playfair italic text-neutral-800 text-opacity-60 lg:text-xl phone:text-lg basic-two flex items-center justify-center`}
+                      className={`font-playfair italic font-bold text-neutral-800 text-opacity-70 lg:text-xl phone:text-lg basic-two flex items-center justify-center`}
                       class='phone:w-48 phone:h-52 lg:w-56 lg:h-80 shadow-md transition duration-500 rounded-md flex mx-auto justify-center hover:scale-105'
                     />
                     <p
-                      class='font-marcellus scrollbar-hidden text-center phone:text-base lg:text-lg text-cyan-700 saturate-150 flex mx-auto justify-center pt-3 pb-2 whitespace-pre-wrap'
+                      class='font-playfair font-medium scrollbar-hidden text-center phone:text-base lg:text-lg text-cyan-700 saturate-150 flex mx-auto justify-center pt-3 pb-2 whitespace-pre-wrap'
                     >
                       {book.author_name ? book.author_name[0] : 'Unknown'}
                     </p>

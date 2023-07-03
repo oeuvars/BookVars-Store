@@ -42,7 +42,6 @@ function App() {
           </div>
 
           <Routes>
-            <Route path="/hero" component={Hero} />
             <Route path="/" component={Home} />
             <Route path="/cart" component={Cart} />
           </Routes>

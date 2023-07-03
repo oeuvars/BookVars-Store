@@ -17,7 +17,13 @@ module.exports = {
         playfair: ['Playfair Display', "serif"],
         righteous: ['Righteous', "cursive"],
         oleo: ['Oleo Script', "cursive"],
-        ribeye: ['Ribeye', "cursive"]
+        ribeye: ['Ribeye', "cursive"],
+        chloe: ['Chloe', 'serif'],
+        harmond: ['Harmond', 'serif'],
+        harmondit: ['HarmondIt', 'serif'],
+        thunder: ["Thunder", 'serif'],
+        newake: ["Newake", 'serif'],
+        fogtwo: ["Fogtwo", 'seriff']
       },
     },
     screens: {

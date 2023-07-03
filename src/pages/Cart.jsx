@@ -9,6 +9,5 @@ export default function Cart() {
                 </Card>
             </div>
         </div>
-
     );
 }

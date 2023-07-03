@@ -1,7 +1,6 @@
-import { onMount, createEffect, createSignal } from 'solid-js';
-import Card from '../components/Card';
+import { onMount, createEffect, createSignal } from "solid-js";
+import Card from "../components/Card";
 import banner from "../assets/BookVars.svg";
-
 
 export default function BookSlider() {
   const [books, setBooks] = createSignal([]);
@@ -16,7 +15,7 @@ export default function BookSlider() {
   });
 
   const openAmazonLink = (url) => {
-    window.open(url, '_blank');
+    window.open(url, "_blank");
   };
 
   const capitalize = (str) => {
@@ -24,32 +23,35 @@ export default function BookSlider() {
   };
 
   createEffect(() => {
-    const container = document.getElementById('bookSliderContainer');
+    const container = document.getElementById("bookSliderContainer");
     const scrollWidth = container.scrollWidth;
     const clientWidth = container.clientWidth;
     const scrollOffset = container.scrollLeft;
 
     const isEndReached = scrollOffset + clientWidth >= scrollWidth;
     if (isEndReached) {
-      container.scrollTo({ left: 0, behavior: 'smooth' });
+      container.scrollTo({ left: 0, behavior: "smooth" });
     }
   });
 
   return (
     <div class="primary-background py-5">
+      <div class="flex justify-center mx-auto bg-opacity-60 pt-7 lg:pb-10 phone:w-11/12 lg:w-full">
+        <img
+          src={banner}
+          class="rounded-md bg-opacity-50 bg-sky-100 shadow-sm hover:saturate-150 hover:scale-105 transition duration-500"
+        />
+      </div>
 
-        <div class="flex justify-center mx-auto bg-opacity-60 pt-7 lg:pb-10 phone:w-11/12 lg:w-full">
-            <img src={banner} class="rounded-md bg-opacity-50 bg-sky-100 shadow-sm hover:saturate-150 hover:scale-105 transition duration-500"/>
-        </div>
-
-        <div class="lg:ml-4">
-            <header class="font-playfair gradient-text phone:text-4xl lg:text-5xl font-medium pt-5 pb-3 flex mx-auto justify-start lg:mr-auto w-11/12 italic">
-                Trending this Month
-            </header>
-            <p class="flex mx-auto font-marcellus font-medium paragraph-text w-11/12 phone:text-base lg:text-xl py-4">
-                From gripping thrillers to heartwarming novels, this month's best sellers offer captivating stories for every reader
-            </p>
-        </div>
+      <div class="lg:ml-4">
+        <header class="font-playfair gradient-text phone:text-4xl lg:text-5xl font-medium pt-5 pb-3 flex mx-auto justify-start lg:mr-auto w-11/12 italic">
+          Trending this Month
+        </header>
+        <p class="flex mx-auto font-fogtwo font-semibold paragraph-text w-11/12 phone:text-base lg:text-xl py-4">
+          From gripping thrillers to heartwarming novels, this month's best
+          sellers offer captivating stories for every reader
+        </p>
+      </div>
 
       <div
         id="bookSliderContainer"
@@ -59,22 +61,29 @@ export default function BookSlider() {
           {books().map((book, index) => (
             <div key={index} class="overflow-y-hidden my-auto">
               <Card>
-                <h2
-                  class="font-aladin font-medium phone:text-xl lg:text-3xl text-blue-500"
-                  style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"
-                >
-                  {capitalize(book.title)}
-                </h2>
+                <div class="max-w-[180px] overflow-hidden whitespace-nowrap flex mx-auto">
+                  <h2 class="font-marcellus phone:text-xl lg:text-xl text-cyan-800 pb-2 overflow-hidden text-ellipsis mx-auto">
+                    {capitalize(book.title)}
+                  </h2>
+                </div>
+
                 <img
                   src={book.book_image}
                   alt="Book Cover"
-                  className={`font-playfair italic text-neutral-800 text-opacity-70 lg:text-xl phone:text-lg basic-two flex items-center justify-center`}
-                  class='phone:w-48 phone:h-52 lg:w-56 lg:h-80 shadow-md transition duration-500 rounded-md flex mx-auto justify-center'
+                  class="shadow-md transition duration-500 rounded-md flex mx-auto justify-center max-w-[200px] max-h-[282px]"
                 />
+
+                <div class="max-w-[200px] overflow-hidden whitespace-nowrap">
+                  <h2 class="font-marcellus font-medium phone:text-base lg:text-lg text-cyan-700 pt-2 overflow-hidden text-ellipsis">
+                    {capitalize(book.author)}
+                  </h2>
+                </div>
+
                 <button
                   onClick={() =>
                     openAmazonLink(
-                      book.buy_links?.find((link) => link.name === 'Amazon')?.url
+                      book.buy_links?.find((link) => link.name === "Amazon")
+                        ?.url
                     )
                   }
                   class="px-5 py-2 font-outfit font-medium cursor-pointer phone:text-sm lg:text-base bg-sky-50 text-cyan-600 bg-opacity-50 hover:bg-opacity-90 transition duration-500 rounded-md shadow-md mt-3"
